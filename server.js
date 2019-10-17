@@ -14,8 +14,8 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 // ROUTER
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
 
 // LISTENER
